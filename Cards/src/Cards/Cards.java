@@ -60,11 +60,11 @@ public class Cards {
 		return false;
 	}
 
-	boolean isSameSuit(Cards card1, Cards card2) {
-		if (card1.sequence / 13 == card2.sequence / 13)
-			return false;
-		if (card1.getPip() == card2.getPip())
+	boolean isSameSuit(Cards card) {
+		if (this.sequence / 13 == card.sequence / 13)
 			return true;
-		return false;// new ArrayList();
+		if (this.getPip() == card.getPip())
+			return false;
+		return true;// new ArrayList();
 	}
 }
