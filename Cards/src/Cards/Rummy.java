@@ -11,9 +11,7 @@ public class Rummy {
 		joker = (int) Math.floor(Math.random() * 52);
 	}
 
-	boolean compareSet(Cards card1, Cards card2, Cards card3) {
-//		System.out.println(card1.isSameSuit(card2) + " " + card2.sequence + " "
-//				+ card1.sequence + " " + card3.sequence);
+	boolean compareSet(Cards card1, Cards card2, Cards card3) { 
 		if (card1.isSameSuit(card2)) {
 			return false;
 		}
@@ -26,7 +24,7 @@ public class Rummy {
 		return true;
 	}
 
-	void maintain() { 
+	void maintainSet() { 
 
 		for (int i = 0; i < 12; i++) {
 			for (int j = 0; j < 11; j++) {
