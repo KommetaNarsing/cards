@@ -49,15 +49,22 @@ public class Cards {
 		}
 		return false;
 	}
-	
-	boolean isAdjacent(Cards card){
-		if(this.sequence/13 != card.sequence/13)
+
+	boolean isAdjacent(Cards card) {
+		if (this.sequence / 13 != card.sequence / 13)
 			return false;
-		if(this.sequence == card.sequence-1)
+		if (this.sequence == card.sequence - 1)
 			return true;
-		if(this.sequence == card.sequence+1)
+		if (this.sequence == card.sequence + 1)
 			return true;
 		return false;
 	}
 
+	boolean isSameSuit(Cards card1, Cards card2) {
+		if (card1.sequence / 13 == card2.sequence / 13)
+			return false;
+		if (card1.getPip() == card2.getPip())
+			return true;
+		return false;// new ArrayList();
+	}
 }
