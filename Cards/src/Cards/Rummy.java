@@ -27,6 +27,22 @@ public class Rummy {
 		return true;
 	}
 
+	void maintainSet() {
+
+		for (int i = 0; i < 12; i++) {
+			for (int j = 0; j < 11; j++) {
+				if (i != j) {
+					if (compareSet(cardSequence[i], cardSequence[j],
+							cardSequence[j + 1])) {
+						// System.out.println(cardSequence[i].sequence+" "+cardSequence[j].sequence+" "+cardSequence[j+1].sequence);
+						System.out.println("got triple");
+						return;
+					}
+				}
+			}
+		}
+	}
+
 	Cards generaterandomjoker() {
 		int seq;
 		Random r = new Random();
@@ -36,9 +52,10 @@ public class Rummy {
 	}
 
 	boolean issequencewithjoker(ArrayList<Cards> ar, Cards joker) {
-		boolean ret = true;
+		/*
+		 * boolean ret = true;
+		 */
 		return true;
-
 	}
 
 	boolean isNaturalsequence(ArrayList<Cards> ar) {
@@ -69,19 +86,4 @@ public class Rummy {
 
 	}
 
-	void maintainSet() {
-
-		for (int i = 0; i < 12; i++) {
-			for (int j = 0; j < 11; j++) {
-				if (i != j) {
-					if (compareSet(cardSequence[i], cardSequence[j],
-							cardSequence[j + 1])) {
-						// System.out.println(cardSequence[i].sequence+" "+cardSequence[j].sequence+" "+cardSequence[j+1].sequence);
-						System.out.println("got triple");
-						return;
-					}
-				}
-			}
-		}
-	}
 }

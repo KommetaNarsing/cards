@@ -9,9 +9,7 @@ public class Cards {
 	}
 
 	String getsuit() {
-		int arr[] = new int[52];
-		for (int i = 0; i < 52; i++) {
-			arr[i] = i;
+		 
 			if (sequence <= 12 && sequence >= 0)
 				return "clubs";
 			if (sequence <= 25 && sequence >= 13)
@@ -20,8 +18,6 @@ public class Cards {
 				return "Hearts";
 			else
 				return "spades";
-		}
-		return "";
 	}
 
 	int getSuitOrder() {
