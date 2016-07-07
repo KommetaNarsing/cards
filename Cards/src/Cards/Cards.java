@@ -4,7 +4,7 @@ public class Cards {
 
 	int sequence;
 
-	private Cards(int a) {
+	Cards(int a) {
 		sequence = a;
 	}
 
@@ -32,11 +32,13 @@ public class Cards {
 		return sequence % 13 + 1;
 	}
 
-	boolean compare(int seq) {
-		if (this.sequence > seq) {
-			return true;
+	int compare(int seq) {
+		if (this.sequence == seq) {
+			return 0;
+		} else if (this.sequence > seq) {
+			return -1;
 		}
-		return false;
+		return 1;
 	}
 
 	boolean equal(Cards card2) {
@@ -45,6 +47,16 @@ public class Cards {
 				return true;
 			}
 		}
+		return false;
+	}
+	
+	boolean isAdjacent(Cards card){
+		if(this.sequence/13 != card.sequence/13)
+			return false;
+		if(this.sequence == card.sequence-1)
+			return true;
+		if(this.sequence == card.sequence+1)
+			return true;
 		return false;
 	}
 
