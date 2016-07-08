@@ -27,7 +27,15 @@ public class Rummy {
 		return true;
 	}
 
-	boolean issequencewithjoker(ArrayList<Cards> ar)
+	Cards generaterandomjoker() {
+		int seq;
+		Random r = new Random();
+		seq = r.nextInt(51 - 0 + 1) + 0;
+		Cards joker = new Cards(seq);
+		return joker;
+	}
+
+	boolean issequencewithjoker(ArrayList<Cards> ar,Cards joker)
 	{
 		boolean ret=true;
 		return true;
