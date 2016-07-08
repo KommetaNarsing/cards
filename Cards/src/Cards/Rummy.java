@@ -1,4 +1,7 @@
+
 package Cards;
+
+import java.util.ArrayList;
 
 public class Rummy {
 	Cards cardSequence[] = new Cards[13];
@@ -12,6 +15,22 @@ public class Rummy {
 	}
 
 	boolean compareSet(Cards card1,Cards card2,Cards card3) {
+		return true;
+	}
+
+	boolean issequencewithjoker(ArrayList<Cards> ar)
+	{
+		boolean ret=true;
+		return true;
+		
+	}
+	boolean isNaturalsequence(ArrayList<Cards> ar)
+	{
+		boolean ret=true;
+		for(Cards c : ar)
+		{
+			
+		}
 		return true;
 	}
 
